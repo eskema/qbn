@@ -71,7 +71,9 @@ body.qbn .pagination .range a.active {
 	color: #000;
 }
 
-body.news-create .field.text .help, body.news-edit .field.text .help, body.news-detail .field.text .help,
+body.news-create .field.text .help, 
+body.news-edit .field.text .help, 
+body.news-detail .field.text .help,
 body.qbn .notes .actions .show-all {
 	color: #666;
 }
@@ -83,7 +85,7 @@ body.qbn #menu {
 
 @media screen and (max-width:800px) {
 	body.qbn .notes,
-  body.qbn .notes .post-form {
+  	body.qbn .notes .post-form {
 		background: #000;
 	}
 }
