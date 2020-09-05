@@ -1,0 +1,89 @@
+/* QBN Dark Mode */
+
+body.qbn,
+body.qbn #sidebar.fixed, 
+body.qbn #sidebar.fixed-add, 
+body.qbn #sidebar.fixed-remove {
+	background: #222;
+	color: #aaa;
+}
+
+#sidebar .public-voice li:not(.selected):not(.announcement) a .title {
+	color: #aaa;
+}
+
+body.qbn input,
+body.qbn textarea {
+	background: none;
+	color: #aaa;
+	border: 1px solid #444!important;
+	box-shadow: none!important;
+}
+
+body.qbn .notes .post-form textarea {
+	border: none!important;
+}
+
+body.qbn h1,
+body.qbn h1 a, 
+body.qbn h2,
+body.qbn h2 a,
+body.qbn .notes .actions,
+body.qbn .notes .actions .add,
+body.qbn .thread dt .score,
+body.qbn .thread dd.main .meta span.score,
+body.qbn .option-list li.selected,
+body.qbn #sidebar .public-voice li.announcement a,
+body.qbn #menu a {
+	color: #fff;
+}
+
+body.qbn a{
+  color: #ddd
+}
+
+body.qbn a.button,
+body.qbn a.qbn-logo,
+#sidebar .public-voice li.selected a .title,
+body.qbn a.user,
+body.qbn .thread dd.main .meta a.user {
+	color: #FA0946;
+}
+
+body.qbn .thread {
+	border-bottom: 1px solid #444;
+}
+
+body.qbn .thread>li {
+	border-top: 1px solid #444;
+}
+
+body.qbn .controls li {
+	background: none;
+}
+
+body.qbn .pagination .range a {
+	color: #999;
+}
+
+body.qbn .pagination .range a.active {
+	background: #fff;
+	color: #000;
+}
+
+body.news-create .field.text .help, body.news-edit .field.text .help, body.news-detail .field.text .help,
+body.qbn .notes .actions .show-all {
+	color: #666;
+}
+
+body.qbn #menu {
+	background: #222;
+	color: #999;
+}
+
+@media screen and (max-width:800px) {
+	body.qbn .notes,
+  body.qbn .notes .post-form {
+		background: #000;
+	}
+}
