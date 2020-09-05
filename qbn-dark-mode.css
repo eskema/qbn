@@ -8,7 +8,7 @@ body.qbn #sidebar.fixed-remove {
 	color: #aaa;
 }
 
-#sidebar .public-voice li:not(.selected):not(.announcement) a .title {
+body.qbn #sidebar .public-voice li:not(.selected):not(.announcement) a .title {
 	color: #aaa;
 }
 
@@ -44,7 +44,7 @@ body.qbn a{
 
 body.qbn a.button,
 body.qbn a.qbn-logo,
-#sidebar .public-voice li.selected a .title,
+body.qbn #sidebar .public-voice li.selected a .title,
 body.qbn a.user,
 body.qbn .thread dd.main .meta a.user {
 	color: #FA0946;
