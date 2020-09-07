@@ -42,6 +42,7 @@ body.qbn a{
   color: #ddd
 }
 
+body.qbn .voter a.active,
 body.qbn a.button,
 body.qbn a.qbn-logo,
 body.qbn #sidebar .public-voice li.selected a .title,
@@ -71,9 +72,8 @@ body.qbn .pagination .range a.active {
 	color: #000;
 }
 
-body.news-create .field.text .help, 
-body.news-edit .field.text .help, 
-body.news-detail .field.text .help,
+body.qbn .voter a.inactive, 
+body.qbn .field.text .help,
 body.qbn .notes .actions .show-all {
 	color: #666;
 }
