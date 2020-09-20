@@ -83,6 +83,10 @@ body.qbn #menu {
 	color: #999;
 }
 
+body.qbn .user.uncertified{
+  color: lime;
+}
+
 @media screen and (max-width:800px) {
 	body.qbn .notes,
   	body.qbn .notes .post-form {
