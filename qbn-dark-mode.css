@@ -206,6 +206,7 @@ body.qbn.news-detail .thread dd.main .meta>* {
 
 .imgsizer,
 .imgsizer img:hover{
+  transition: all .6s ease-in-out 1s;
   max-width: 100%!important;
   max-height: 100%!important;
 }
