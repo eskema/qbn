@@ -143,6 +143,7 @@ body.qbn .thread .main{
 body.qbn .body{
   grid-area: body;
   padding: 0;
+  font-size: 2em;
 }
 
 body.qbn .thread .meta{
