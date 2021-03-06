@@ -5,7 +5,7 @@ body.qbn #sidebar.fixed,
 body.qbn #sidebar.fixed-add, 
 body.qbn #sidebar.fixed-remove {
 	background: #222;
-	color: #aaa;
+	color: #ddd;
 }
 
 body.qbn #sidebar .public-voice li:not(.selected):not(.announcement) a .title {
@@ -32,7 +32,6 @@ body.qbn .notes .actions,
 body.qbn .notes .actions .add,
 body.qbn .thread dt .score,
 body.qbn .thread dd.main .meta span.score,
-body.qbn .option-list li.selected,
 body.qbn #sidebar .public-voice li.announcement a,
 body.qbn #menu a {
 	color: #fff;
@@ -47,7 +46,8 @@ body.qbn a.button,
 body.qbn a.qbn-logo,
 body.qbn #sidebar .public-voice li.selected a .title,
 body.qbn a.user,
-body.qbn .thread dd.main .meta a.user {
+body.qbn .thread dd.main .meta a.user, 
+body.qbn .dogear a {
 	color: #FA0946;
 }
 
@@ -63,15 +63,14 @@ body.qbn .controls li {
 	background: none;
 }
 
-body.qbn .pagination .range a {
-	color: #999;
-}
 
 body.qbn .pagination .range a.active {
 	background: #fff;
 	color: #000;
 }
 
+body.qbn .option-list li a,
+body.qbn .pagination .range a, 
 body.qbn .voter a.inactive, 
 body.qbn .field.text .help,
 body.qbn .notes .actions .show-all {
@@ -83,8 +82,135 @@ body.qbn #menu {
 	color: #999;
 }
 
+body.qbn.news-detail h1,
+body.qbn #meta,
+body.qbn .controls
+ {
+    margin-left: 0;
+}
+
+body.qbn .option-list li.selected a{
+  color: #999;
+}
+
 body.qbn .user.uncertified{
   color: lime;
+}
+body.qbn .thread .reply dl{
+  display: grid;
+  width: 100%;
+  grid-template-areas: 
+    "main notes";
+    grid-template-columns: auto 1fr;
+}
+
+body.qbn .thread dt{
+  display: none;
+  grid-area: head;
+  padding: 0;
+  text-align: left;
+}
+
+body.qbn .thread dt .user{
+  padding: 0;
+  margin: 0;
+}
+
+body.qbn .thread .notes{
+  grid-area: notes;
+  width: 320px;
+  justify-self: end;
+  overflow: scroll;
+  padding: 1em 2em;
+}
+
+body.qbn .thread .notes .inner ul{
+  display: grid;
+  grid-gap: 0 1em;
+  overflow: scroll;
+}
+
+body.qbn .thread .main{
+  position: relative;
+  display: grid;
+  grid-area: main;
+  grid-template-areas: 
+    "body"
+    "meta";
+  justify-content: start;
+}
+
+body.qbn .body{
+  grid-area: body;
+  padding: 0;
+}
+
+body.qbn .thread .meta{
+  position: relative;
+  grid-area: meta;
+  display: grid;
+  justify-self: start;
+  align-items: start;
+  align-self: end;
+  margin-right: 2em;
+  padding-bottom: 2rem;
+  height: auto;
+  grid-template-areas: 
+    "user score voter ."
+    "created dogear voter flag";
+  grid-gap: 1em 3em;
+}
+body.qbn .thread .meta .voter{
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  width: auto;
+  grid-area: voter;
+  display: grid;
+  grid-gap: 1em;
+}
+
+body.qbn .thread .meta .voter a{
+  display: block;
+  text-align: left;
+  padding: 0;
+}
+body.qbn .thread .meta .user{
+  grid-area: user;
+}
+
+body.qbn .thread .meta .score{
+  grid-area: score;
+}
+
+body.qbn .thread .meta .created{
+  grid-area: created;
+}
+
+body.qbn .thread .meta .dogear{
+  grid-area: dogear;
+}
+
+body.qbn .thread .meta .flagger{
+  grid-area: flag;
+  
+}
+
+
+body.qbn.news-detail .thread dd.main .meta>* {
+    display: grid;
+    padding: 0;
+}
+
+.imgsizer,
+.imgsizer img:hover{
+  max-width: 100%!important;
+  max-height: 100%!important;
+}
+
+body.qbn .sized{
+  width: auto;
 }
 
 @media screen and (max-width:800px) {
@@ -92,4 +218,9 @@ body.qbn .user.uncertified{
   	body.qbn .notes .post-form {
 		background: #000;
 	}
+}
+
+body.qbn .vidsizer{
+  width: 800px;
+  max-width: 100%;
 }
