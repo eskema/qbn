@@ -26,6 +26,10 @@ body.qbn textarea {
 	box-shadow: none!important;
 }
 
+body.qbn .news .notes{
+  display: none;
+}
+
 body.qbn .notes .post-form textarea {
 	border: none!important;
 }
@@ -238,12 +242,13 @@ body.qbn .thread>li {
 body.qbn .controls{
   grid-area: controls;
   position: sticky;
-  bottom: 1em;
+  bottom: 0;
   margin: 0;
-  padding: .6em .6em .6em 0;
+  padding: .6em .6rem .6em 0;
   background-color:#222;
   z-index: 2;
   justify-self: start;
+  box-sizing: border-box;
 }
 
 body.qbn.news-detail #meta + .controls{
@@ -311,6 +316,9 @@ body.qbn .thread dt .user{
   padding: 0;
   margin: 0;
 }
+
+
+
 
 body.qbn .thread .notes{
   grid-area: notes;
@@ -405,6 +413,8 @@ body.qbn .thread .meta .user{
   opacity: 1;
 }
 
+
+
 body.qbn .thread .meta .score{
   grid-area: score;
 }
@@ -428,18 +438,29 @@ body.qbn.news-detail .thread dd.main .meta>* {
     padding: 0;
 }
 
+body.qbn .thread .news .meta .user{
+  font-size: 2rem;
+  text-align: right;
+  grid-column: span 4;
+  grid-area: voter;
+  justify-self: end;
+}
+
 .imgsizer{
-  justify-self: start;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #00000000;
+  
 }
 
 .imgsizer img{
-  transition: all .3s ease-in-out 1s; 
-}
-
-.imgsizer img:hover{
-  
+   display: block;
   max-width: 100%;
   max-height: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 body.qbn .vidsizer{
@@ -454,3 +475,15 @@ body.qbn .vidsizer{
 	}
 }
 
+body.qbn #footer {
+  position: fixed;
+  bottom: 1em;
+  padding: 0;
+  margin: 0;
+  right: 0;
+  left: auto;
+  width: auto;
+  opacity: .1;
+  height: auto;
+  font-size: .8em;
+}
