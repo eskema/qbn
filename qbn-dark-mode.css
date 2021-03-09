@@ -137,7 +137,6 @@ body.qbn #sidebar .public-voice ul li a .title{
   position: relative;
   margin: 0;
   padding: 0;
-  //line-height: 1;
   width: auto;
   display: block;
   overflow: auto;
@@ -245,7 +244,6 @@ body.qbn .controls{
   background-color:#222;
   z-index: 2;
   justify-self: start;
-  //align-self: start;
 }
 
 body.qbn.news-detail #meta + .controls{
@@ -316,10 +314,8 @@ body.qbn .thread dt .user{
 
 body.qbn .thread .notes{
   grid-area: notes;
-  //width: 320px;
   box-sizing: border-box;
   align-self: start;
-  //justify-self: end;
   padding: 1em 0;
   position: sticky;
   position: -webkit-sticky;
