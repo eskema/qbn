@@ -8,6 +8,10 @@ body.qbn #sidebar.fixed-remove {
 	color: #ddd;
 }
 
+body.qbn #menu .krop{
+  display: none;
+}
+
 
 
 body.qbn #sidebar .public-voice li:not(.selected):not(.announcement) a .title {
