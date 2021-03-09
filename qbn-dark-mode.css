@@ -1,15 +1,21 @@
 /* QBN Dark Mode */
 
-body.qbn, body.qbn #sidebar.fixed, body.qbn #sidebar.fixed-add, body.qbn #sidebar.fixed-remove {
+body.qbn,
+body.qbn #sidebar.fixed, 
+body.qbn #sidebar.fixed-add, 
+body.qbn #sidebar.fixed-remove {
 	background: #222;
 	color: #ddd;
 }
+
+
 
 body.qbn #sidebar .public-voice li:not(.selected):not(.announcement) a .title {
 	color: #aaa;
 }
 
-body.qbn input, body.qbn textarea {
+body.qbn input,
+body.qbn textarea {
 	background: none;
 	color: #aaa;
 	border: 1px solid #444!important;
@@ -20,206 +26,248 @@ body.qbn .notes .post-form textarea {
 	border: none!important;
 }
 
-body.qbn h1, body.qbn h1 a, body.qbn h2, body.qbn h2 a, body.qbn .notes .actions, body.qbn .notes .actions .add, body.qbn .thread dt .score, body.qbn .thread dd.main .meta span.score, body.qbn #sidebar .public-voice li.announcement a, body.qbn #menu a {
+body.qbn h1,
+body.qbn h1 a, 
+body.qbn h2,
+body.qbn h2 a,
+body.qbn .notes .actions,
+body.qbn .notes .actions .add,
+body.qbn .thread dt .score,
+body.qbn .thread dd.main .meta span.score,
+body.qbn #sidebar .public-voice li.announcement a,
+body.qbn #menu a {
 	color: #fff;
 }
 
-body.qbn a {
-	color: #ddd
+body.qbn a{
+  color: #ddd
 }
 
-body.qbn .voter a.active, body.qbn a.button, body.qbn a.qbn-logo, body.qbn #sidebar .public-voice li.selected a .title, body.qbn a.user, body.qbn .thread dd.main .meta a.user, body.qbn .dogear a {
+body.qbn .voter a.active,
+body.qbn a.button,
+body.qbn a.qbn-logo,
+body.qbn #sidebar .public-voice li.selected a .title,
+body.qbn a.user,
+body.qbn .thread dd.main .meta a.user, 
+body.qbn .dogear a {
 	color: #FA0946;
 }
 
-body.qbn .sized {
-	width: auto;
-	display: grid;
-	grid-template-columns: 1fr auto;
-	grid-template-areas: "main sidebar";
+body.qbn .sized{
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: 
+    "main sidebar";
 }
 
-body.qbn .close, body.qbn #menu-trigger {
-	top: .6rem;
+body.qbn .close,
+body.qbn #menu-trigger{
+  top: .6rem;
 }
 
-body.qbn #sidebar {
-	grid-area: sidebar;
-	position: sticky;
-	top: 0;
-	overflow: unset;
-	align-self: start;
-	padding-top: 1.3em;
+body.qbn #sidebar{
+  grid-area: sidebar;
+  position: sticky;
+  top: 0;
+  overflow: unset;
+  align-self: start;
+  padding-top: 1.3em;
 }
 
-body.qbn #sidebar .logo {
-	margin: 0;
-	height: auto;
-	width: auto;
-	display: grid;
-	align-items: center;
-	align-content: center;
-	padding-left: 2.6rem;
+body.qbn #sidebar .logo{
+  margin: 0;
+  height: auto;
+  width: auto;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  padding-left: 2.6rem;
 }
 
-body.qbn #sidebar .logo .qbn-logo {
-	font-size: 2.6rem;
-	line-height: 1;
+body.qbn #sidebar .logo .qbn-logo{
+  font-size: 2.6rem;
+  line-height: 1;
 }
 
-body.qbn #sidebar .public-voice {
-	padding: 0;
-	padding-left: 3.4em;
+body.qbn #sidebar .public-voice{
+  padding: 0;
+  padding-left: 3.4em;
 }
 
-body.qbn #sidebar .public-voice > div {
-	display: grid;
+body.qbn #sidebar .public-voice > div{
+  display: grid;
 }
 
-body.qbn #sidebar .public-voice ul {
-	padding-top: 0;
-	display: grid;
-	grid-gap: .6em;
-	padding-top: 3.5rem;
+body.qbn #sidebar .public-voice ul{
+  padding-top: 0;
+  display: grid;
+  grid-gap: .6em;
+  padding-top: 3.5rem; 
+} 
+
+body.qbn #sidebar .public-voice ul li{
+  height: auto;
+  line-height: 1;
+  display: grid;
+  text-align: left;
+  grid-template-areas: 
+    "topic count";
+    align-items: end;
 }
 
-body.qbn #sidebar .public-voice ul li {
-	height: auto;
-	line-height: 1;
-	display: grid;
-	text-align: left;
-	grid-template-areas: "topic count";
-	align-items: end;
+body.qbn #sidebar .public-voice ul li .count{
+  grid-area: count;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  width: auto;
 }
 
-body.qbn #sidebar .public-voice ul li .count {
-	grid-area: count;
-	position: relative;
-	margin: 0;
-	padding: 0;
-	line-height: 1;
-	width: auto;
+body.qbn #sidebar .public-voice ul li a{
+  grid-area: topic;
 }
 
-body.qbn #sidebar .public-voice ul li a {
-	grid-area: topic;
+body.qbn #sidebar .public-voice ul li a .title{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  //line-height: 1;
+  width: auto;
+  display: block;
+  overflow: auto;
 }
 
-body.qbn #sidebar .public-voice ul li a .title {
-	position: relative;
-	margin: 0;
-	padding: 0;
-	width: auto;
-	display: block;
-	overflow: auto;
+body.qbn #sidebar .public-voice .actions{
+  width: auto;
+  margin: 0;
+  padding-left: 0;
+  padding: 1.7em 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "prev next";
+
 }
 
-body.qbn #sidebar .public-voice .actions {
-	width: auto;
-	margin: 0;
-	padding-left: 0;
-	padding: 1.7em 0;
-	position: relative;
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-template-areas: "prev next";
-	grid-gap: 1em;
+body.qbn #sidebar .public-voice .actions:first-of-type{
+  display: none;
 }
 
-body.qbn #sidebar .public-voice .actions:first-of-type {
-	display: none;
+body.qbn #sidebar .public-voice .actions a{
+  margin: 0;
+  opacity: .3;
 }
 
-body.qbn #sidebar .public-voice .actions .prev {
-	position: relative;
-	width: auto;
-	grid-area: prev;
+body.qbn #sidebar .public-voice .actions a:hover{
+  opacity: 1;
 }
 
-body.qbn #main {
-	overflow: unset;
-	grid-area: main;
-	margin: 0;
-	padding-left: 2rem;
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-gap: 1em;
-	grid-template-areas: "title filter"
+body.qbn #sidebar .public-voice .actions .prev{
+  position: relative;
+  width: auto;
+  grid-area: prev;
+  padding-right: 1em;
+}
+
+body.qbn #sidebar .public-voice .actions .next{
+  display: grid;
+  justify-self: stretch;
+  grid-area: next;
+}
+
+body.qbn #main{
+  overflow: unset;
+  grid-area: main;
+  margin: 0;
+  padding-left: 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 1em;
+   grid-template-areas: 
+    "title filter"
     "body body"
     "controls controls"
     "post-form post-form";
 }
 
-body.qbn #main h1 {
-	grid-area: title;
-	position: sticky;
-	top: 0;
-	padding-top: .4em;
-	z-index: 1;
+body.qbn #main h1{
+  grid-area: title;
+  position: sticky;
+  top: 0;
+  padding-top: .4em;
+  z-index: 1;
 }
 
-body.qbn #main #meta {
-	grid-area: filter;
-	align-self: end;
-	padding: 0;
+body.qbn #main #meta{
+    grid-area: filter;
+    align-self: end;
+    padding: 0;
 }
 
-body.qbn #main .filter {
-	grid-area: filter;
-	align-self: end;
+body.qbn #main .filter{
+  grid-area: filter;
+  align-self: end;
 }
 
-body.qbn .filter .sort {
-	position: relative;
-	top: 0;
-	left: 0;
-	width: auto;
+body.qbn .filter .sort{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: auto;
 }
 
 body.qbn .thread {
 	border-bottom: 1px solid #444;
-	grid-area: body;
-	margin: 0;
+  grid-area: body;
+  margin: 0;
 }
 
-body.qbn #main .post-form {
-	grid-area: post-form;
+body.qbn #main .post-form{
+  grid-area: post-form;
 }
 
 body.qbn .thread>li {
 	border-top: 1px solid #444;
 }
 
-body.qbn .controls {
-	grid-area: controls;
-	position: sticky;
-	bottom: 1em;
-	margin: 0;
-	padding: .6em .6em .6em 0;
-	background-color: #222;
-	z-index: 2;
-	justify-self: start;
+body.qbn .controls{
+  grid-area: controls;
+  position: sticky;
+  bottom: 1em;
+  margin: 0;
+  padding: .6em .6em .6em 0;
+  background-color:#222;
+  z-index: 2;
+  justify-self: start;
+  //align-self: start;
 }
 
-body.qbn.news-detail #meta + .controls {
-	grid-area: controls;
-	display: none;
+body.qbn.news-detail #meta + .controls{
+  grid-area: controls;
+  display: none;
 }
 
-body.qbn.news-detail .thread + .controls .dogear {
-	display: none;
+body.qbn.news-detail .thread + .controls .dogear{
+  display: none;
 }
 
 body.qbn .controls li {
 	background: none;
 }
 
+
 body.qbn .pagination .range a.active {
 	background: #fff;
 	color: #000;
 }
 
-body.qbn .option-list li a, body.qbn .pagination .range a, body.qbn .voter a.inactive, body.qbn .field.text .help, body.qbn .notes .actions .show-all {
+body.qbn .option-list li a,
+body.qbn .pagination .range a, 
+body.qbn .voter a.inactive, 
+body.qbn .field.text .help,
+body.qbn .notes .actions .show-all {
 	color: #666;
 }
 
@@ -228,168 +276,180 @@ body.qbn #menu {
 	color: #999;
 }
 
-body.qbn.news-detail h1, body.qbn #meta, body.qbn .controls {
-	margin-left: 0;
+body.qbn.news-detail h1,
+body.qbn #meta,
+body.qbn .controls
+ {
+    margin-left: 0;
 }
 
-body.qbn .option-list li.selected a {
-	color: #999;
+body.qbn .option-list li.selected a{
+  color: #999;
 }
 
-body.qbn .user.uncertified {
-	color: lime;
+body.qbn .user.uncertified{
+  color: lime;
+}
+body.qbn .thread .reply dl{
+  display: grid;
+  width: 100%;
+  grid-template-areas: 
+    "main notes";
+    grid-template-columns: 1fr auto;
 }
 
-body.qbn .thread .reply dl {
-	display: grid;
-	width: 100%;
-	grid-template-areas: "main notes";
-	grid-template-columns: 1fr auto;
+body.qbn .thread dt{
+  display: none;
+  grid-area: head;
+  padding: 0;
+  text-align: left;
 }
 
-body.qbn .thread dt {
-	display: none;
-	grid-area: head;
-	padding: 0;
-	text-align: left;
+body.qbn .thread dt .user{
+  padding: 0;
+  margin: 0;
 }
 
-body.qbn .thread dt .user {
-	padding: 0;
-	margin: 0;
+body.qbn .thread .notes{
+  grid-area: notes;
+  //width: 320px;
+  box-sizing: border-box;
+  align-self: start;
+  //justify-self: end;
+  padding: 1em 0;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  padding-top: 6rem;
+  width: 320px;
 }
 
-body.qbn .thread .notes {
-	grid-area: notes;
-	box-sizing: border-box;
-	align-self: start;
-	padding: 1em 0;
-	position: sticky;
-	position: -webkit-sticky;
-	top: 0;
-	padding-top: 6rem;
-	width: 320px;
+body.qbn .thread .notes .inner ul{
+  display: grid;
+  grid-gap: 0 1em;
+  overflow: scroll;
 }
 
-body.qbn .thread .notes .inner ul {
-	display: grid;
-	grid-gap: 0 1em;
-	overflow: scroll;
+body.qbn .thread .main{
+  position: relative;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  grid-template-columns: 1fr 320px;
+  grid-template-areas: 
+    "body meta";
+  justify-content: start;
+  grid-gap: 1em;
+  padding: 0;
 }
 
-body.qbn .thread .main {
-	position: relative;
-	display: grid;
-	grid-column: 1 / -1;
-	grid-row: 1;
-	grid-template-columns: 1fr 320px;
-	grid-template-areas: "body meta";
-	justify-content: start;
-	grid-gap: 1em;
-	padding: 0;
+body.qbn .body{
+  grid-area: body;
+  padding: 0;
+  font-size: 2em;
 }
 
-body.qbn .body {
-	grid-area: body;
-	padding: 0;
-	font-size: 2em;
-}
-
-body.qbn .thread .meta {
-	position: relative;
-	grid-area: meta;
-	display: grid;
-	align-items: start;
-	align-self: start;
-	padding-bottom: 1rem;
-	padding-top: 1.4rem;
-	height: auto;
-	grid-template-areas: "user score voter ."
+body.qbn .thread .meta{
+  position: relative;
+  grid-area: meta;
+  display: grid;
+  align-items: start;
+  align-self: start;
+  padding-bottom: 1rem;
+  padding-top: 1.4rem;
+  height: auto;
+  grid-template-areas: 
+    "user score voter ."
     "created dogear voter flag";
-	grid-gap: 1em 3em;
-	position: sticky;
-	position: -webkit-sticky;
-	top: 0;
-	background-color: #222;
-	z-index: 1;
+  grid-gap: 1em 3em;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: #222;
+  z-index: 1;
 }
 
-body.qbn .thread .meta a {
-	opacity: .2;
+body.qbn .thread .meta a{
+  opacity: .2;
 }
 
-body.qbn .thread .meta .voter a.active, body.qbn .thread .meta a:hover {
-	opacity: .8;
-	color: white;
+body.qbn .thread .meta .voter a.active,
+body.qbn .thread .meta a:hover{
+  opacity: .8;
+  color: white;
 }
 
-body.qbn .voter a.active::after {
-	content: "d";
+body.qbn .voter a.active::after{
+  content: "d";
 }
 
-body.qbn .thread .meta .voter {
-	position: relative;
-	left: 0;
-	top: 0;
-	display: block;
-	width: auto;
-	grid-area: voter;
-	display: grid;
-	grid-gap: 1em;
+body.qbn .thread .meta .voter{
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  width: auto;
+  grid-area: voter;
+  display: grid;
+  grid-gap: 1em;
 }
 
-body.qbn .thread .meta .voter a {
-	display: block;
-	text-align: left;
-	padding: 0;
+body.qbn .thread .meta .voter a{
+  display: block;
+  text-align: left;
+  padding: 0;
 }
 
-body.qbn .thread .meta .user {
-	grid-area: user;
-	opacity: 1;
+body.qbn .thread .meta .user{
+  grid-area: user;
+  opacity: 1;
 }
 
-body.qbn .thread .meta .score {
-	grid-area: score;
+body.qbn .thread .meta .score{
+  grid-area: score;
 }
 
-body.qbn .thread .meta .created {
-	grid-area: created;
+body.qbn .thread .meta .created{
+  grid-area: created;
 }
 
-body.qbn .thread .meta .dogear {
-	grid-area: dogear;
+body.qbn .thread .meta .dogear{
+  grid-area: dogear;
 }
 
-body.qbn .thread .meta .flagger {
-	grid-area: flag;
+body.qbn .thread .meta .flagger{
+  grid-area: flag;
+  
 }
+
 
 body.qbn.news-detail .thread dd.main .meta>* {
-	display: grid;
-	padding: 0;
+    display: grid;
+    padding: 0;
 }
 
-.imgsizer {
-	justify-self: start;
+.imgsizer{
+  justify-self: start;
 }
 
-.imgsizer img {
-	transition: all .3s ease-in-out 1s;
+.imgsizer img{
+  transition: all .3s ease-in-out 1s; 
 }
 
-.imgsizer img:hover {
-	max-width: 100%;
-	max-height: 100%;
+.imgsizer img:hover{
+  
+  max-width: 100%;
+  max-height: 100%;
 }
 
-body.qbn .vidsizer {
-	width: auto;
-	max-width: 100%;
+body.qbn .vidsizer{
+  width: auto;
+  max-width: 100%;
 }
 
 @media screen and (max-width:800px) {
-	body.qbn .notes, body.qbn .notes .post-form {
+	body.qbn .notes,
+  	body.qbn .notes .post-form {
 		background: #000;
 	}
 }
