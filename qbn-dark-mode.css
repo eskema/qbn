@@ -110,18 +110,19 @@ body.qbn #sidebar .public-voice > div{
 body.qbn #sidebar .public-voice ul{
   padding-top: 0;
   display: grid;
-  grid-gap: .6em;
+  grid-gap: .5em;
   padding-top: 3.5rem; 
 } 
 
 body.qbn #sidebar .public-voice ul li{
   height: auto;
-  line-height: 1;
+  line-height: 1.2;
   display: grid;
   text-align: left;
   grid-template-areas: 
     "topic count";
     align-items: end;
+  overflow: auto;
 }
 
 body.qbn #sidebar .public-voice ul li .count{
@@ -135,6 +136,7 @@ body.qbn #sidebar .public-voice ul li .count{
 
 body.qbn #sidebar .public-voice ul li a{
   grid-area: topic;
+  overflow: auto;
 }
 
 body.qbn #sidebar .public-voice ul li a .title{
