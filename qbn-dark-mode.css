@@ -207,6 +207,15 @@ body.qbn #main h1{
   top: 0;
   padding-top: .4em;
   z-index: 1;
+  mix-blend-mode: difference;
+}
+
+body.qbn #main h2{
+  position: sticky;
+  top: 2.4em;
+  padding-top: .4em;
+  z-index: 1;
+  mix-blend-mode: difference;
 }
 
 body.qbn #main #meta{
@@ -253,9 +262,14 @@ body.qbn .controls{
   box-sizing: border-box;
 }
 
-body.qbn.news-detail #meta + .controls{
-  grid-area: controls;
+body.qbn .thread + .controls{
   display: none;
+}
+
+body.qbn.hot-replies .thread + .controls,
+body.qbn.subscribed-replies .thread + .controls,
+body.qbn.home .thread + .controls{
+  display: block;
 }
 
 body.qbn.news-detail .thread + .controls .dogear{
@@ -453,7 +467,6 @@ body.qbn .thread .news .meta .user{
   width: 100%;
   height: 100vh;
   background: #00000000;
-  
 }
 
 .imgsizer img{
@@ -463,6 +476,7 @@ body.qbn .thread .news .meta .user{
   height: 100%;
   width: 100%;
   object-fit: contain;
+
 }
 
 body.qbn .vidsizer{
