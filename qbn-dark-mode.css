@@ -108,7 +108,6 @@ body.qbn #sidebar .public-voice > div{
 }
 
 body.qbn #sidebar .public-voice ul{
-  padding-top: 0;
   display: grid;
   grid-gap: .5em;
   padding-top: 3.5rem; 
@@ -192,13 +191,12 @@ body.qbn #main{
   margin: 0;
   padding-left: 2rem;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr 1fr;
   grid-gap: 1em;
    grid-template-areas: 
-    "title filter"
-    "body body"
-    "controls controls"
-    "post-form post-form";
+    "title filter controls"
+    "body body body"
+    "post-form post-form post-form";
 }
 
 body.qbn #main h1{
@@ -210,12 +208,51 @@ body.qbn #main h1{
   mix-blend-mode: difference;
 }
 
+body.qbn .avatar{
+  grid-area: filter;
+  top: 1em;
+  left: 0;
+  height: 50px;
+  width: 120px;
+  background-size: contain;
+  position: relative;
+  animation: fuckyou 2s ease-in-out infinite alternate;
+}
+
+@keyframes fuckyou {
+  0%{
+    transform: rotateZ(0);
+  }
+
+  100%{
+    transform: rotateZ(359deg);
+  }
+}
+
+body.qbn .details{
+  display: grid;
+  grid-area: filter;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  padding-top: 1em;
+}
+
+body.qbn.home h1,
+body.qbn.cover h1{
+  padding-bottom: 0;
+}
+
+body.qbn #main .main p.first-child,
 body.qbn #main h2{
   position: sticky;
   top: 2.4em;
   padding-top: .4em;
   z-index: 1;
   mix-blend-mode: difference;
+}
+
+body.qbn #main .main p.first-child{
+  top: 3em;
 }
 
 body.qbn #main #meta{
@@ -227,6 +264,10 @@ body.qbn #main #meta{
 body.qbn #main .filter{
   grid-area: filter;
   align-self: end;
+  position: sticky;
+  top: 2.6em;
+  z-index: 2;
+  mix-blend-mode: difference;
 }
 
 body.qbn .filter .sort{
@@ -253,13 +294,14 @@ body.qbn .thread>li {
 body.qbn .controls{
   grid-area: controls;
   position: sticky;
-  bottom: 0;
+  padding-top: 1rem;
+  top: 0;
   margin: 0;
-  padding: .6em .6rem .6em 0;
-  background-color:#222;
-  z-index: 2;
-  justify-self: start;
+  z-index: 4;
+  align-self: end;
+  justify-self: end;
   box-sizing: border-box;
+  min-width: 320px;
 }
 
 body.qbn .thread + .controls{
@@ -280,10 +322,18 @@ body.qbn .controls li {
 	background: none;
 }
 
+body.qbn .pagination {
+  background: #222;
+}
+
 
 body.qbn .pagination .range a.active {
 	background: #fff;
 	color: #000;
+}
+
+body.qbn .pagination .range a {
+  min-width: 0;
 }
 
 body.qbn .option-list li a,
@@ -313,19 +363,31 @@ body.qbn .option-list li.selected a{
 body.qbn .user.uncertified{
   color: lime;
 }
-body.qbn .thread .reply dl{
+body.qbn .thread dl{
   display: grid;
   width: 100%;
   grid-template-areas: 
-    "main notes";
-    grid-template-columns: 1fr auto;
+    "thumb main notes";
+    grid-template-columns: auto 1fr auto;
 }
 
 body.qbn .thread dt{
-  display: none;
-  grid-area: head;
+  grid-area: thumb;
   padding: 0;
   text-align: left;
+  height: auto;
+  padding-right: 2em;
+}
+
+body.qbn .thread .news dt,
+body.qbn .thread .reply dt{
+  display: none;
+}
+
+body.qbn .thread dt a{
+  display: block;
+  height: 200px;
+  margin-left: 0;
 }
 
 body.qbn .thread dt .user{
@@ -344,21 +406,20 @@ body.qbn .thread .notes{
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  padding-top: 6rem;
+  padding-top: 7rem;
   width: 320px;
 }
 
 body.qbn .thread .notes .inner ul{
   display: grid;
   grid-gap: 0 1em;
-  overflow: scroll;
 }
 
 body.qbn .thread .main{
   position: relative;
   display: grid;
-  grid-column: 1 / -1;
-  grid-row: 1;
+  grid-area: main;
+  grid-column: 2 / -1;
   grid-template-columns: 1fr 320px;
   grid-template-areas: 
     "body meta";
@@ -374,20 +435,18 @@ body.qbn .body{
 }
 
 body.qbn .thread .meta{
-  position: relative;
   grid-area: meta;
   display: grid;
   align-items: start;
   align-self: start;
   padding-bottom: 1rem;
-  padding-top: 1.4rem;
+  padding-top: 3.4rem;
   height: auto;
   grid-template-areas: 
     "user score voter ."
     "created dogear voter flag";
   grid-gap: 1em 3em;
   position: sticky;
-  position: -webkit-sticky;
   top: 0;
   background-color: #222;
   z-index: 1;
@@ -411,7 +470,6 @@ body.qbn .thread .meta .voter{
   position: relative;
   left: 0;
   top: 0;
-  display: block;
   width: auto;
   grid-area: voter;
   display: grid;
@@ -429,6 +487,13 @@ body.qbn .thread .meta .user{
   opacity: 1;
 }
 
+body.qbn .thread .meta .date{
+  grid-area: created;
+}
+
+body.qbn .thread .meta .date::after{
+  content: none;
+}
 
 
 body.qbn .thread .meta .score{
@@ -449,7 +514,7 @@ body.qbn .thread .meta .flagger{
 }
 
 
-body.qbn.news-detail .thread dd.main .meta>* {
+body.qbn .thread dd.main .meta>* {
     display: grid;
     padding: 0;
 }
@@ -469,6 +534,11 @@ body.qbn .thread .news .meta .user{
   background: #00000000;
 }
 
+.imgsizer:hover,
+.vidsizer:hover{
+  z-index: 10;
+}
+
 .imgsizer img{
    display: block;
   max-width: 100%;
@@ -483,6 +553,8 @@ body.qbn .vidsizer{
   width: auto;
   max-width: 100%;
 }
+
+
 
 @media screen and (max-width:800px) {
 	body.qbn .notes,
